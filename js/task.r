@@ -1,25 +1,35 @@
 #  - Компонент- це ф-я, яка отримує об'єкт властивостей
 #  (який називається props) і повертає React-елементи (HTML розмітку).
- 
- // src/App.jsx
 
-const Product = () => {
-  return (
-    <div>
-      <h2>Cookies</h2>
-			<p>Price: 999 credits</p>
-    </div>
-  );
-};
+#     4 основних поняття в реакт:
+#  1. компоненти (components) -синтаксис, 
+#     завдяки якому створюються компоненти
+#  2. JavaScript Syntax Extension
+#  3. властивості (props)- управляти компонентами
+#  4. стан (state)
+===============================================================
+способи створити компонент:
 
-export default function App() {
-  return (
-    <div>
-      <h1>Products</h1>
+-функціональні компоненти -
 
-      <Product />
-      <Product />
-      <Product />
-    </div>
-  );
+традиційна ф-я:
+ function HelloWorld() {
+    retern <h1>Hello World</h1>
+ }
+
+або стрілочна:
+const HelloWorld = () => {
+    retern <h1>Hello World</h1>
+} - перевага - змінна, оголошена в const не може мати інакше значення
+
+-класові компоненти:
+class HelloWorld extends Component {
+    render() {
+        return <h1>Hello World</h1>
+    }
 }
+ Метод render визначає те, що належить рендерингу
+
+ ==============================================================
+
+ JSX -синтаксис, завдяки якому можна об'єднувати html, css i js.
